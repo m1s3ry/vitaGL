@@ -32,6 +32,7 @@ inline float4 glslTexture2D(sampler2D x, float2 s) { return tex2D(x,s); }
 inline float4 glslTexture2D(sampler2D x, float2 s, float b) { return tex2Dbias(x,float4(s,1,b)); }
 inline float4 textureCube(samplerCUBE x, float3 s) { return texCUBE(x,s); }
 inline float4 textureCube(samplerCUBE x, float3 s, float b) { return texCUBEbias(x,float4(s,b)); }
+#define const static
 #define texture2D glslTexture2D
 #define lowp
 #define mediump
